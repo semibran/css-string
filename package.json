@@ -1,0 +1,10 @@
+{
+ "name": "css-string",
+ "version": "1.0.0",
+ "description": "create CSS-compatible strings from object trees",
+ "author": "semibran (Brandon Semilla)",
+ "repository": "semibran/css-string",
+ "license": "MIT",
+ "main": "lib/css-string.js",
+ "keywords": [ "css", "stringify", "tree", "virtual-dom" ]
+}
