@@ -1,10 +1,8 @@
 # css-string
-> Create CSS-compatible strings from object trees
+> create CSS-compatible strings from object trees
 
 ```js
-const stringify = require("css-string")
-
-var style = document.createElement("style")
+let style = document.createElement("style")
 document.head.appendChild(style)
 style.innerText = stringify({
   body: {
@@ -14,16 +12,18 @@ style.innerText = stringify({
 })
 ```
 
-This package exposes the `stringify` function, which creates CSS-compatible strings from object trees. The resulting strings can be used directly in dynamic stylesheets as well as [`HTMLElement.style`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style).
+This package exposes the `stringify` function, which creates CSS-compatible strings from object trees. The resulting strings can be used directly in dynamic stylesheets as well as [`HTMLElement.style`][HTMLElement.style].
 
 ## usage
-[![NPM](https://nodei.co/npm/css-string.png?mini)](https://www.npmjs.com/package/css-string)
+[![npm badge]][npm package]
+
 ```js
 > stringify({ color: "red" })
-"color:red;"
+"color:red"
 ```
 
-Use strings to represent complex selectors, property names, and values.
+Use strings as keys to represent complex selectors, property names, and values.
+
 ```js
 > stringify({
     "*": {
@@ -32,10 +32,11 @@ Use strings to represent complex selectors, property names, and values.
       "box-sizing": "border-box"
     }
   })
-"*{margin:0;padding:0;box-sizing:border-box;}"
+"*{margin:0;padding:0;box-sizing:border-box}"
 ```
 
-If a declaration has an object as its value, it will be treated as a rule with a selector and declarations.
+If a declaration has an object as its value, it will be treated as a rule with its own selector and declarations.
+
 ```js
 > stringify({
     nav: {
@@ -45,8 +46,9 @@ If a declaration has an object as its value, it will be treated as a rule with a
       }
     }
   })
-"nav{display:flex;a{color:inherit;}}"
+"nav{display:flex;a{color:inherit}}"
 ```
 
-## license
-[MIT](https://opensource.org/licenses/MIT) © [Brandon Semilla](https://git.io/semibran)
+[npm package]:       https://www.npmjs.com/package/css-string
+[npm badge]:         https://nodei.co/npm/css-string.png?mini
+[HTMLElement.style]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
