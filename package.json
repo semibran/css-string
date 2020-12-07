@@ -1,6 +1,6 @@
 {
  "name": "css-string",
- "version": "1.0.0",
+ "version": "1.0.1",
  "description": "create CSS-compatible strings from object trees",
  "author": "semibran (Brandon Semilla)",
  "repository": "semibran/css-string",
