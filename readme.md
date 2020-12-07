@@ -49,6 +49,9 @@ If a declaration has an object as its value, it will be treated as a rule with i
 "nav{display:flex;a{color:inherit}}"
 ```
 
+## license
+[MIT](https://opensource.org/licenses/MIT) © [Brandon Semilla](https://git.io/semibran)
+
 [npm package]:       https://www.npmjs.com/package/css-string
 [npm badge]:         https://nodei.co/npm/css-string.png?mini
 [HTMLElement.style]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
